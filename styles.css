@@ -1,3 +1,46 @@
+/* Outdated Warning - Red Theme */
+#asite-mod { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0); backdrop-filter: blur(2px); 
+    display: flex; align-items: center; justify-content: center; 
+    z-index: 21000; pointer-events: none; opacity: 0; 
+    transition: all 0.4s ease; font-family: 'Poppins', sans-serif; 
+}
+
+#asite-mod.nav-ds-show { 
+    background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(4px); 
+    pointer-events: auto; opacity: 1; 
+}
+
+.asite-card { 
+    background: #1c1c1e; border: 1px solid #ff3030; padding: 32px; 
+    border-radius: 28px; width: 340px; text-align: center; 
+    transform: scale(0.85); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+#asite-mod.nav-ds-show .asite-card { transform: scale(1); }
+
+.asite-ttl { color: #ff3030; margin-bottom: 12px; font-weight: 600; font-size: 20px; }
+
+.asite-txt { color: #a1a1aa; font-size: 14px; margin-bottom: 25px; line-height: 1.4; }
+
+.asite-btn { 
+    width: 100%; padding: 12px; border-radius: 12px; border: none; 
+    cursor: pointer; font-weight: 600; background: #ff3030; color: #fff; 
+    transition: background 0.2s, transform 0.2s; 
+}
+
+.asite-btn:hover { background: #d62828; transform: scale(1.02); }
+
+
+
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 * {
