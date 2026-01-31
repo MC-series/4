@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Include HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <Style>
+
+a {
+  text-decoration: none;
+  color: #ffb14c;
+  font-weight: 700;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: #ff764c;
+    font-weight: 700;
+  }
+
+  .slid-wrapper {
+    max-width: 1190px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Center the container horizontally */
+    height: 85vh; /* Ensure the container takes full viewport height */
+  }
+  
+  .slid-wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    z-index: 1; /* Ensure above the carousel */
+  }
+  
+  .slid-wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+  }
+  
+  .slid-wrapper i:first-child {
+    left: -22px;
+  }
+  
+  .slid-wrapper i:last-child {
+    right: -22px;
+  }
+  
+  .slid-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slid-carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  
+  .slid-carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  
+  .slid-carousel.dragging .slid-card {
+    cursor: grab;
+    user-select: none;
+  }
+  
+  .slid-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px); /* Adjust based on your design */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px; /* Increased gap between cards */
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    height: 600px; /* Increased height for the carousel */
+  }
+  
+  .slid-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow transition */
+    overflow: hidden; /* Ensure no overflow of scaled content */
+    height: 580px; /* Adjusted height of each card */
+  }
+  
+  .slid-carousel .slid-card {
+    scroll-snap-align: start;
+    background: #fff;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Added padding */
+  }
+  
+  .slid-card .slid-img {
+    width: 100%; /* Ensure image takes full width */
+    height: 100%; /* Adjusted height for the image */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow */
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .topic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background: #fff;
+    color: #4b5563;
+    font-size: 0.9rem;
+    font-weight: 700;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    transform: translateY(0);
+    transition: color 0.3s ease-in, transform 0.4s linear;
+    cursor: pointer;
+  }
+  
+  h1 {
+  text-align: center;
+  font-family: Nunito, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(0deg, #f76591, #ffc16f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.5; /* Line spacing */
+  margin-bottom: 36px; /* Space below the h1 */
+  padding-left: 10px;
+  position: relative; /* Ensure relative positioning */
+}
+    </Style>
+
+</head>
+<body>
+  <h1>Select A Serie:</h1>
+        
+  <div class="slid-wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <div class="slid-carousel">
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://image.tmdb.org/t/p/original/zthWx1TKEXy9MOfedBaJ0ZLr8vn.jpg" alt="1" draggable="false"></div>
+        <a href="mydemon.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://image.tmdb.org/t/p/original/uUM4LVlPgIrww07OoEKrGWlS1Ej.jpg" alt="1" draggable="false"></div>
+        <a href="theglory.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p19174483_b_v8_aa.jpg" alt="1" draggable="false"></div>
+        <a href="sweethome.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BMmY3ZDZhNDUtN2NkMy00MDZhLTk5MjQtOTMzNDI2YjQwY2FmXkEyXkFqcGdeQXVyMTMzNzIyNDc1._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="bloodhounds.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://image.tmdb.org/t/p/original/fvcEgIUZMks1cZPgZTnIHqUArtN.jpg" alt="1" draggable="false"></div>
+        <a href="goodbadmother.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BYzc0N2VmYjQtY2Y0Mi00NzBhLTk3YjctNDI4MTU2YWJkYWFmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="1" draggable="false"></div>
+        <a href="lovealarm.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BMDlhODA1NGEtMDcxYi00YTdkLWFiZTktOTQyYTNkN2U1NzAyXkEyXkFqcGdeQXVyMTI1OTY3MzM3._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="marrymyhusband.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://image.tmdb.org/t/p/original/rBuCoS0VB9M6zkEUCvnVrfeF0J.jpg" alt="1" draggable="false"></div>
+        <a href="wtwoworlds.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://i.pinimg.com/736x/49/e2/bc/49e2bcebe2990a1b7453851e84e6ae7a.jpg" alt="1" draggable="false"></div>
+        <a href="DrStranger.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BZWU5YWI4MzAtNjUwYi00MmFhLWI4MzItOWE5OWZmMjAxMGZmXkEyXkFqcGdeQXVyNDg3OTE3MzU@._V1_FMjpg_UY2137_.jpg0" alt="1" draggable="false"></div>
+        <a href="Tomorrow.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BN2IxOGQ1OGQtODNmMy00ZDJkLTg3ZTQtOTY4YTJjMjFjZTMzXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="moving.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://i.pinimg.com/originals/be/b0/18/beb018297063a92e70a369875cb4842f.jpg" alt="1" draggable="false"></div>
+        <a href="BusinessProposal.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BMGM2ODk3MTItN2ZkOS00ODMzLTg1ZjgtMWI3Y2U5ZDNmMzc0XkEyXkFqcGdeQXVyNjI4NDY5ODM@._V1_FMjpg_UX1000_.jpg" alt="1" draggable="false"></div>
+        <a href="What'sWrongWithSecretaryKim.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BOWFhYzhkMjgtNjhjNC00NDUwLWE2M2MtODczYTliYTI4OWJkXkEyXkFqcGdeQXVyNDQxOTAyNA@@._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="bigmouth.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BNjk3NDk3MDEtMTU2OS00NTFiLWJkOWMtYTA2YjJlMTMyYTk1XkEyXkFqcGdeQXVyNDY5MjMyNTg@._V1_FMjpg_UX1000_.jpg" alt="1" draggable="false"></div>
+        <a href="TrueBeauty.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BYTk0Nzk5ZWYtYTNlZi00YjBjLWJhYjctMWMwMmYyMDA5ZjJmXkEyXkFqcGdeQXVyNDY5MjMyNTg@._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="It'sOkaytoNotBeOkay.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BMzRiZWUyN2YtNDI4YS00NTg2LTg0OTgtMGI2ZjU4ODQ4Yjk3XkEyXkFqcGdeQXVyNTI5NjIyMw@@._V1_FMjpg_UX1000_.jpg" alt="1" draggable="false"></div>
+        <a href="CrashLandingOn ou.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://rashkavip.com/wp-content/uploads/2023/08/qbkSS1cTjT4DzIwD44bdhTuYgdT-354x520.jpg" alt="1" draggable="false"></div>
+        <a href="Vincenzo.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BNzZhMWJmZDUtZmM1NC00NmNhLThlM2MtYWU2ZmRkYWEwMmJkXkEyXkFqcGdeQXVyNjI4NDY5ODM@._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="BrandingInSeongsu.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://wallpapercave.com/wp/wp12064035.jpg" alt="1" draggable="false"></div>
+        <a href="Abyss.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://media.themoviedb.org/t/p/w500/3Fh0F9tlq1ly788RnZRPoreAhSY.jpg" alt="1" draggable="false"></div>
+        <a href="QueenOfTheRing.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://i.pinimg.com/originals/a6/88/47/a6884717a8a52dfa080f5659f76d8da1.jpg" alt="1" draggable="false"></div>
+        <a href="18Again.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BZjE5ZDJmZGItMDRkNi00YjAxLTliYjQtYjBjZjk4Yjk4NjdhXkEyXkFqcGdeQXVyMTUzOTcyODA5._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="KingTheLand.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://i.pinimg.com/736x/0b/2e/9f/0b2e9f2a20b251450178800397c419b2.jpg" alt="1" draggable="false"></div>
+        <a href="QueenOfTears.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/I/81HWMykk35L._AC_UF894,1000_QL80_.jpg" alt="1" draggable="false"></div>
+        <a href="TheUncannyCounter.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://image.tmdb.org/t/p/original/ruwAlQ76fR1nZb3oWQanDfVI3Rc.jpg" alt="1" draggable="false"></div>
+        <a href="ItaewonClass.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://blog.asianwiki.com/wp-content/uploads/2022/08/Gaus_Electronics-p1.jpeg" alt="1" draggable="false"></div>
+        <a href="GausElectronics.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAxNsTw82CqGojZ8FTtan18P7eYfW478_Pg&s" alt="1" draggable="false"></div>
+        <a href="MrQueen.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BODU5NDUxMGEtYzg5OS00NzBjLWFkZjctMzE5YzczOTU2ZGU0XkEyXkFqcGdeQXVyNjI4NDY5ODM@._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="StrongGirlNamSoon.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://asianwiki.com/images/3/39/Lovely_Runner-p1.jpg" alt="1" draggable="false"></div>
+        <a href="LovelyRunner.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://i.pinimg.com/736x/32/62/e8/3262e801fa7a19fad9e206bffde75950.jpg" alt="1" draggable="false"></div>
+        <a href="20thcenturygirl.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+            <div class="slid-img"><img src="https://m.media-amazon.com/images/M/MV5BMDI1MzI0NGItODViMC00ZjdlLWE5NWEtM2U4ZDQyZmNhNDk0XkEyXkFqcGdeQXVyNDI3NjU1NzQ@._V1_.jpg" alt="1" draggable="false"></div>
+        <a href="taleoftheninetailed.html" class="topic" target="_blank">Check It Out</a>
+      </div>
+      <div class="slid-card">
+        <div class="slid-img"><img src="https://image.tmdb.org/t/p/original/q2IiPRSXPOZ6qVRj36WRAYEQyHs.jpg" alt="1" draggable="false"></div>
+      <a href="AlchemyOfSouls.html" class="topic" target="_blank">Check It Out</a>
+  </div>
+    </div>
+  <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+  
+  </div>  
+  </div>
+
+</body>
+</html>
+<script>
+
+  // Image Slidder Code:
+  const wrapper = document.querySelector(".slid-wrapper");
+const carousel = document.querySelector(".slid-carousel");
+const firstCardWidth = carousel.querySelector(".slid-card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".slid-wrapper i");
+const carouselChildrens = [...carousel.children];
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+  carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
+
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+  carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+// Scroll the carousel at appropriate position to hide first few duplicate cards on Firefox
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+  });
+});
+
+const dragStart = (e) => {
+  isDragging = true;
+  carousel.classList.add("dragging");
+  // Records the initial cursor and scroll position of the carousel
+  startX = e.pageX;
+  startScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+  if(!isDragging) return; // if isDragging is false return from here
+  // Updates the scroll position of the carousel based on the cursor movement
+  carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+
+const dragStop = () => {
+  isDragging = false;
+  carousel.classList.remove("dragging");
+}
+
+const infiniteScroll = () => {
+  // If the carousel is at the beginning, scroll to the end
+  if(carousel.scrollLeft === 0) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+    carousel.classList.remove("no-transition");
+  }
+  // If the carousel is at the end, scroll to the beginning
+  else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+  }
+
+  // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+  clearTimeout(timeoutId);
+  if(!wrapper.matches(":hover")) autoPlay();
+}
+
+const autoPlay = () => {
+  if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+  // Autoplay the carousel after every 2500 ms
+  timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 10000);
+}
+autoPlay();
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+
+  const slidCards = document.querySelectorAll(".slid-card");
+
+  const handleCardClick = (event) => {
+    const previouslySelected = document.querySelector(".slid-card.selected");
+    if (previouslySelected) {
+      previouslySelected.classList.remove("selected");
+    }
+
+    const currentCard = event.currentTarget;
+    currentCard.classList.add("selected");
+  }
+
+</script>
