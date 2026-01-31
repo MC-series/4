@@ -1,3 +1,29 @@
+// Function to show warning on load
+window.addEventListener('load', () => {
+    const modal = document.getElementById('asite-mod');
+    if (modal) {
+        setTimeout(() => {
+            modal.classList.add('nav-ds-show');
+        }, 500);
+    }
+});
+
+// Function to close the warning
+function asiteExit() {
+    const modal = document.getElementById('asite-mod');
+    if (modal) {
+        modal.classList.remove('nav-ds-show');
+    }
+}
+
+
+
+
+
+
+
+
+
 // Main Js:
 
   // Image Slidder Code:
